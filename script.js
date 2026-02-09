@@ -97,8 +97,8 @@ const getExchangeRate = async () => {
 
   // Validate amount input
   if (amount === "" || amount < 1) {
-    amount = 1;
-    amountInput.value = "1";
+    amount = 0;
+    amountInput.value = "0";
   }
 
   try {
