@@ -1,54 +1,3 @@
-// const BASE_URL = "https://api.exchangerate-api.com/v4/latest/";
-
-// const dropdowns = document.querySelectorAll("select");
-// const btn = document.querySelector("form button");
-// const fromCurr = document.querySelector(".from select");
-// const toCurr = document.querySelector(".to select");
-// const msg = document.querySelector(".msg");
-
-// for (let select of dropdowns) {
-//   for (let code in countryList) {
-//     let newOption = document.createElement("option");
-//     newOption.innerText = code;
-//     newOption.value = code;
-//     if (select.name === "from" && code === "USD") {
-//       newOption.selected = "selected";
-//     } else if (select.name === "to" && code === "PKR") {
-//       newOption.selected = "selected";
-//     }
-//     select.append(newOption);
-//   }
-//   select.addEventListener("change", (evt) => {
-//     updateflag(evt.target);
-//   });
-// }
-
-// const updateflag = (element) => {
-//   let code = element.value;
-//   let countryCode = countryList[code];
-//   let newsrc = `https://flagsapi.com/${countryCode}/flat/64.png`;
-//   let img = element.parentElement.querySelector("img");
-//   img.src = newsrc;
-// };
-// btn.addEventListener("click", async (evt) => {
-//   evt.preventDefault();
-//   let amount = document.querySelector(".amount input");
-//   let amtval = amount.value;
-//   if (amtval === "" || amtval < 1) {
-//     amtval = 0;
-//     amount.value = 0;
-//   }
-
-//   const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}/${toCurr.value.toLowerCase()}`;
-//   let response = await fetch(URL);
-//   console.log(response);
-//   let data = await response.json();
-//   console.log(data);
-// });
-
-// [NEW CODE]:
-
-// API Configuration
 const BASE_URL = "https://api.exchangerate-api.com/v4/latest/";
 
 // Get DOM elements
@@ -154,5 +103,5 @@ amountInput.addEventListener("keypress", (evt) => {
 
 // Initial exchange rate calculation on page load
 window.addEventListener("load", () => {
-  // getExchangeRate();
+  getExchangeRate();
 });
