@@ -97,8 +97,8 @@ const getExchangeRate = async () => {
 
   // Validate amount input
   if (amount === "" || amount < 1) {
-    amount = 0;
-    amountInput.value = "0";
+    amount = "";
+    amountInput.value = "";
   }
 
   try {
@@ -154,5 +154,5 @@ amountInput.addEventListener("keypress", (evt) => {
 
 // Initial exchange rate calculation on page load
 window.addEventListener("load", () => {
-  getExchangeRate();
+  // getExchangeRate();
 });
